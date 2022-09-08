@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Mirza&display=swap');
+* {
+  box-sizing: border-box                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+}
+body {
+  font-family: 'Mirza', cursive;
+  padding: 0;
+  margin: 0;
+  color: #232223;
+}
+
+.main-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: #3b5555dd;
+
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-menu input {
+  margin-bottom: 30px;
+  padding: 14px;
+  outline: none;
+  border: none;
+
+  border-bottom: 2px solid #fff;
+  color: white;
+  background-color: rgba(221, 221, 221, 0.152);
+  font-size: 24px;
+  text-align: center;
+  border-radius: 4px;
+}
+input::placeholder {
+  font-size: 24px;
+}
+.main-menu span {
+  background-color: white;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 30px;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+}
+
+
+
+.wave {
+  z-index: -100;
+  position: absolute;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+@media (max-width:800px) {
+  main {
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+}
+.info {
+  user-select: none;
+  font-size: 28px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid dodgerblue;
+  background-color: rgba(30, 143, 255, 0.132); */
+  background-color: rgba(255, 255, 255, 0.76);
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%, 10%);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.info-wrapper {
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+
+  border-radius: 6px;
+  padding: 5px;
+}
+.fa-user {
+/* color: #7ab38c;  background-color: ; */
+color: #f3af1d ;
+opacity: 0.7;
+}
+.fa-heart-crack {
+  /* color: #c32290; */
+  color: #1a9193 ;
+  opacity: 0.7;
+}
+.title {
+  text-transform: uppercase;
+}
+/* .title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(#1a9193 1px, transparent 0);
+  background-size: 10px 10px;
+  background-position: -10px -10px;
+  /* transform: translateY(%) rotate(45deg) ; */
+
+
+main .card {
+  border-radius: 16px;
+  height: 110px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  padding: 30px;
+  transition: transform 0.6s;
+  cursor: pointer;
+  margin: 10px;
+  background-color: #EEE;
+  border: 2px solid #BBB;
+  transform-style: preserve-3d;
+  /* opacity: 0.2;
+  background: repeating-linear-gradient( -45deg, #babdff, #babdff 2px, #e5e5f7 2px, #e5e5f7 10px ); */
+}
+
+@media (max-width:610px) {
+  main .card {
+    height:95px;
+    width: 95px;
+  }
+
+
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  /* background-color: #999; */
+
+}
+/* .card .front {
+  position: relative;
+} */
+.card .back {
+background-color: #EEE;
+}
+.card .front i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card .face {
+  backface-visibility: hidden;
+  text-align: center;
+  /* background-color: #999; */
+
+
+}
+
+/* .card:hover {
+  transform: rotateY(180deg);
+} */
+.memory-game {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 100%; */
+}
+
+@media (max-width:610px) {
+  .memory-game {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media (max-width:470px) {
+  .memory-game {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+.face .front {
+  text-align: center;
+
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.done {
+  transform: rotateY(180deg);
+}
+
+
+.card.done i {
+  color: #ccc;
+}
+.card.done {
+  border-color: #ddd;
+}
+.card:not(.done) {
+  transition: transform 0.3, box-shadow 0.3s;
+}
+.card:not(.done):hover {
+  box-shadow:
+  0px 0px 0.6px rgba(0, 0, 0, 0.011),
+  0px 0px 1.3px rgba(0, 0, 0, 0.016),
+  0px 0px 2.5px rgba(0, 0, 0, 0.02),
+  0px 0px 4.5px rgba(0, 0, 0, 0.024),
+  0px 0px 8.4px rgba(0, 0, 0, 0.029),
+  0px 0px 20px rgba(0, 0, 0, 0.04)
+;
+}

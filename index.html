@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Memory Game</title>
+</head>
+<body>
+  <div class="main-menu">
+    <input type="text" placeholder="Your name">
+    <span>Start Game</span>
+  </div>
+
+
+
+
+  <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#f9efe5" fill-opacity="1" d="M0,288L120,293.3C240,299,480,309,720,304C960,299,1200,277,1320,266.7L1440,256L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+  </svg>
+  <main>
+
+    <div class="info-wrapper">
+
+      <div class="info">
+
+        <div class="name">
+          <i class="fa-solid fa-user "></i>
+          Name: <span></span>
+        </div>
+        <!-- <div class="title">Memory Game!</div> -->
+
+        <div class="tries">
+          <i class="fa-solid fa-heart-crack"></i>
+          Tries: <span>0</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="memory-game">
+
+      <div class="card" data-name="dog">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-dog"></i>
+        </div>
+      </div>
+      <div class="card" data-name="dog">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-dog"></i>
+        </div>
+      </div>
+
+      <div class="card" data-name="fish">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-fish-fins"></i>
+        </div>
+      </div>
+      <div class="card" data-name="fish">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-fish-fins"></i>
+        </div>
+      </div>
+      <div class="card" data-name="cat">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-cat"></i>
+        </div>
+      </div>
+      <div class="card" data-name="cat">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-cat"></i>
+        </div>
+      </div>
+
+      <div class="card" data-name="crow">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-crow"></i>
+        </div>
+      </div>
+      <div class="card" data-name="crow">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-crow"></i>
+        </div>
+      </div>
+
+      <div class="card" data-name="frog">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-frog"></i>
+        </div>
+      </div>
+      <div class="card" data-name="frog">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-frog"></i>
+        </div>
+      </div>
+
+      <div class="card" data-name="horse">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-horse"></i>
+        </div>
+      </div>
+      <div class="card" data-name="horse">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-horse"></i>
+        </div>
+      </div>
+
+      <div class="card" data-name="dragon">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-dragon"></i>
+        </div>
+      </div>
+      <div class="card" data-name="dragon">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-dragon"></i>
+        </div>
+      </div>
+
+      <div class="card" data-name="spider">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-spider"></i>
+        </div>
+      </div>
+      <div class="card" data-name="spider">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-spider"></i>
+        </div>
+      </div>
+
+      <div class="card" data-name="dove">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-dove"></i>
+        </div>
+      </div>
+      <div class="card" data-name="dove">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-dove"></i>
+        </div>
+      </div>
+
+      <div class="card" data-name="hippo">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-hippo"></i>
+        </div>
+      </div>
+      <div class="card" data-name="hippo">
+        <div class="face front">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="face back">
+          <i class="fa-solid fa-hippo"></i>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </main>
+
+  <audio class="correct" src="audio/correct.mp3"></audio>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
